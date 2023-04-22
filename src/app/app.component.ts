@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AB-project';
+  app_version: number;
+
+  constructor() {
+    this.app_version = this.getRandomInt(2);
+  }
+
+  private getRandomInt(max: number) {
+    return Math.floor(Math.random() * max);
+  }
 }
