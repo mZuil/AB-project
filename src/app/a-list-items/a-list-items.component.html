@@ -1,2 +1,24 @@
-<p>a-list-items works!</p>
-<img class="img-responsive" src={{headphonesList[0].image_path}}>
+<div class="containers">
+    <div class="title">
+        <h1><span>Online</span> shopping</h1>
+    </div>
+
+    <input type="text" class="form-control py-2 border-right-0"
+    placeholder="Search..." name="keyword" [(ngModel)]="keyword">
+
+    <div class="row">
+        <div class="col-md-3" *ngFor="let headphones of headphonesList | filter: keyword">
+            <div class="card">
+                <img class="img-responsive img-headphones" src={{headphones.image_path}}>
+                <div class="content">
+                    <h4>{{headphones.name}}</h4>
+                    <h5>{{headphones.price}}€</h5>
+                </div>
+                <button class="see-more">See more</button>
+            </div>
+        </div>
+    </div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZM3BsrklNkmI9zhQynldT29JtJ9mJIsFIiR8-J1XjV786pA/viewform?usp=pp_url&entry.1034314124=Version+A&embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
+</div>
+

@@ -1,8 +1,6 @@
-<div *ngIf="app_version === 0">
+<section *ngIf="app_version === 0" class="bg-color">
   <app-a-list-items></app-a-list-items>
-</div>
-<div *ngIf="app_version === 1">
+</section>
+<section *ngIf="app_version === 1" class="bg-color">
   <app-b-list-items></app-b-list-items>
-</div>
-
-<!-- comment the ngIf and one of the component when you want to test the UI :)-->
+</section>
